@@ -1,0 +1,24 @@
+name: second action
+on: [push]
+
+jobs:
+  run-first:
+    runs-on: ubuntu-latest
+    steps:
+      - name: display text
+        run: echo "text"
+      - name: command 
+        run: |
+          node -v
+          npm -v
+  run-paral:
+    runs-on: windows-latest
+    steps:
+      - name: display node version
+        run: node -v
+  run-second-command:
+    runs-on: macos-latest
+    needs: [run-first]
+    steps:
+      - name: display node version
+        run: node -v
