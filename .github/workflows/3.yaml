@@ -7,6 +7,6 @@ jobs:
     steps:
       - name: copy to repo
         run: ls -a 
-      - uses: actions/chekout@v4
+      - uses: actions/checkout@v4
       - name: list repo
         run: ls -a
