@@ -1,0 +1,11 @@
+name: 4th workflow
+on: 
+  workflow_run: 
+    workflow: 3rd workflow
+
+jobs:
+  first_job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: hello
+        run: hello
