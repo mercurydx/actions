@@ -1,0 +1,11 @@
+name: 3rd workflow
+on: push
+
+jobs:
+  1st-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: command in mulitpli
+        run: |
+          pwd
+          ls -a 
