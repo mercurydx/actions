@@ -5,8 +5,16 @@ on:
     types:
       - completed
 jobs:
-  first_job:
+  success_job:
     runs-on: ubuntu-latest
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}
     steps:
-      - name: hello
-        run: echo "hello"
+      - name: success
+        run: echo "success"
+  failure-job:
+    runs-on: ubuntu-latest
+    if: ${{ github.event.workflow_run.conclusion == 'failure'}}
+    steps:
+      - name: fail
+        run: echo " failure"
+  
