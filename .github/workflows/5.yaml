@@ -1,5 +1,5 @@
 name: fiveth workflow
-on: [push, issues, pull request]
+on: [push, issues, pull_request]
 jobs:
   first:
     runs-on: ubuntu-latest  
